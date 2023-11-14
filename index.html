@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: skyblue;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container textarea{
+            border: 5px solid white;
+            border-radius: 2rem;
+            padding: 1rem;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+
+        .container p{
+            font-weight: bolder;
+            font-size: 4rem;
+            color: white ;
+        }
+
+         
+       
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <p style="font-size: 2rem;">You've entered</p>
+        <p id="demo"> 0</p>
+        <p style="font-size: 2rem;">Characters</p>
+        
+        <textarea name="text" id="text" cols="30" rows="10" ></textarea>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+    <script>
+        const text = document.querySelector('#text');
+
+        
+        
+        text.addEventListener('input', function(){
+            var count = text.value.length
+            document.querySelector('#demo').innerHTML = count;
+        })
+
+        
+        
+    </script>
+</body>
+</html>
